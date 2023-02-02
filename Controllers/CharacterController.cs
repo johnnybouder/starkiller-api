@@ -9,7 +9,7 @@ using starkiller_api.Models;
 
 namespace starkiller_api.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/characters")]
     [ApiController]
     public class CharacterController : ControllerBase
     {
@@ -20,7 +20,7 @@ namespace starkiller_api.Controllers
             _context = context;
         }
 
-        // GET: api/Character
+        // GET: api/Characters
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Character>>> GetCharacters()
         {
