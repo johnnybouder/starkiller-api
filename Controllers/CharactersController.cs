@@ -31,6 +31,17 @@ namespace starkiller_api.Controllers
             return await _context.Characters.ToListAsync();
         }
 
+        // GET: api/Characters/allegiance/Sith
+        [HttpGet("allegiance/{allegiance}")]
+        public async Task<ActionResult<IEnumerable<Character>>> GetCharactersByAllegiance(string allegiance)
+        {
+            if (_context.Characters == null)
+            {
+                return NotFound();
+            }
+            return await _context.Characters.Where(character => character.Allegiance == allegiance).ToListAsync();
+        }
+
         // GET: api/Characters/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Character>> GetCharacter(long id)
