@@ -16,14 +16,14 @@ public class ApiContext : DbContext
     {
         base.OnModelCreating(builder);
         builder.Entity<Character>().HasData(
-            new Character { Id = 1, Name = "Darth Vader", Allegeance = "Sith", LightSaber = "Red" },
-            new Character { Id = 2, Name = "Darth Sidious", Allegeance = "Sith", LightSaber = "Red" },
-            new Character { Id = 3, Name = "Kylo Ren", Allegeance = "Sith", LightSaber = "Red" },
-            new Character { Id = 4, Name = "Darth Maul", Allegeance = "Sith", LightSaber = "Red" },
-            new Character { Id = 5, Name = "Count Dooku", Allegeance = "Sith", LightSaber = "Red" },
-            new Character { Id = 6, Name = "Yoda", Allegeance = "Jedi", LightSaber = "Green" },
-            new Character { Id = 7, Name = "Luke Skywalker", Allegeance = "Jedi", LightSaber = "Blue" },
-            new Character { Id = 8, Name = "Mace Windu", Allegeance = "Jedi", LightSaber = "Purple" }
+            new Character { Id = 1, Name = "Darth Vader", Allegiance = "Sith", LightSaber = "Red" },
+            new Character { Id = 2, Name = "Darth Sidious", Allegiance = "Sith", LightSaber = "Red" },
+            new Character { Id = 3, Name = "Kylo Ren", Allegiance = "Sith", LightSaber = "Red" },
+            new Character { Id = 4, Name = "Darth Maul", Allegiance = "Sith", LightSaber = "Red" },
+            new Character { Id = 5, Name = "Count Dooku", Allegiance = "Sith", LightSaber = "Red" },
+            new Character { Id = 6, Name = "Yoda", Allegiance = "Jedi", LightSaber = "Green" },
+            new Character { Id = 7, Name = "Luke Skywalker", Allegiance = "Jedi", LightSaber = "Blue" },
+            new Character { Id = 8, Name = "Mace Windu", Allegiance = "Jedi", LightSaber = "Purple" }
         );
     }
 }
