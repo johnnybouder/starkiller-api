@@ -11,11 +11,11 @@ namespace starkiller_api.Controllers
 {
     [Route("api/characters")]
     [ApiController]
-    public class CharacterController : ControllerBase
+    public class CharactersController : ControllerBase
     {
         private readonly ApiContext _context;
 
-        public CharacterController(ApiContext context)
+        public CharactersController(ApiContext context)
         {
             _context = context;
         }
@@ -31,7 +31,7 @@ namespace starkiller_api.Controllers
             return await _context.Characters.ToListAsync();
         }
 
-        // GET: api/Character/5
+        // GET: api/Characters/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Character>> GetCharacter(long id)
         {
@@ -49,7 +49,7 @@ namespace starkiller_api.Controllers
             return character;
         }
 
-        // PUT: api/Character/5
+        // PUT: api/Characters/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutCharacter(long id, Character character)
@@ -80,7 +80,7 @@ namespace starkiller_api.Controllers
             return NoContent();
         }
 
-        // POST: api/Character
+        // POST: api/Characters
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<Character>> PostCharacter(Character character)
@@ -96,7 +96,7 @@ namespace starkiller_api.Controllers
             // return CreatedAtAction("GetCharacter", new { id = character.Id }, character);
         }
 
-        // DELETE: api/Character/5
+        // DELETE: api/Characters/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCharacter(long id)
         {
